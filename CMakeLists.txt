@@ -13,3 +13,7 @@ add_executable(PghServer)
 target_sources(PghServer PRIVATE src/main.c src/util.c src/args.c src/server.c)
 target_include_directories(PghServer PRIVATE include src)
 target_compile_definitions(PghServer PRIVATE _XOPEN_SOURCE=700)
+
+# llhttp
+target_include_directories(PghServer PRIVATE llhttp/include)
+target_sources(PghServer PRIVATE llhttp/src/native/api.c llhttp/src/native/http.c)
