@@ -16,4 +16,4 @@ target_compile_definitions(PghServer PRIVATE _XOPEN_SOURCE=700)
 
 # llhttp
 target_sources(PghServer PRIVATE picohttpparser/picohttpparser.c)
-target_include_directories(PghServer PRIVATE third_party/picohttpparser)
+target_include_directories(PghServer PRIVATE picohttpparser)
